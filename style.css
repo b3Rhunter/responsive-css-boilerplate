@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+    color: rgba(40, 36, 36, 0.71);
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: hsla(98, 19%, 91%, 1);
+    background-image:
+      radial-gradient(at 86% 18%, hsla(259, 10%, 69%, 1) 0px, transparent 50%),
+      radial-gradient(at 86% 67%, hsla(144, 14%, 88%, 1) 0px, transparent 50%),
+      radial-gradient(at 63% 95%, hsla(301, 5%, 57%, 1) 0px, transparent 50%),
+      radial-gradient(at 5% 85%, hsla(240, 13%, 65%, 1) 0px, transparent 50%),
+      radial-gradient(at 61% 11%, hsla(334, 48%, 90%, 1) 0px, transparent 50%),
+      radial-gradient(at 84% 26%, hsla(339, 18%, 63%, 1) 0px, transparent 50%),
+      radial-gradient(at 99% 45%, hsla(235, 8%, 57%, 1) 0px, transparent 50%);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+main {
+    flex-grow: 1;
+    margin: 1em;
+}
+
+main, footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 1em;
+}
+
+footer {
+    margin-bottom: 1em;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .awesome-button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.75em 1.2em;
+    border: none;
+    color: rgba(45, 40, 40, 0.676);
+    background: linear-gradient(270deg, #e7dedf, #c5c7d2);
+    background-size: 200% 200%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    animation: gradient 5s ease infinite, pulse 2s ease-in-out infinite;
+  }
+
+  .awesome-button:hover {
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .awesome-button:active {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(0px);
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    main,
+    nav,
+    footer {
+      width: 50%;
+    }
+
+}
